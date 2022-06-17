@@ -552,9 +552,10 @@
         </button>
         <p class="modal-title">Оставьте свои данные, мы вам перезвоним</p>
         <form>
-          <input type="text" class="modal-input" />
-          <input type="text" class="modal-input" />
-          <input type="text" class="modal-input" />
+          <input type="text" class="modal-input" name="user-name" required minlength="2"/>
+          <input type="tel" class="modal-input" name="user-tel" required minlength="3"/>
+          <input type="email" class="modal-input" name="user-email" required maxlength="12"/>
+          <button type="submit">Отправить</button>
         </form>
       </div>
     </div>
