@@ -552,9 +552,44 @@
         </button>
         <p class="modal-title">Оставьте свои данные, мы вам перезвоним</p>
         <form>
-          <input type="text" class="modal-input" name="user-name" required minlength="2"/>
-          <input type="tel" class="modal-input" name="user-tel" required minlength="3"/>
-          <input type="email" class="modal-input" name="user-email" required maxlength="12"/>
+          <label class="madal-label"
+            >Имя
+            <input
+              type="text"
+              class="modal-input"
+              name="user-name"
+              required
+              minlength="2"
+            />
+          </label>
+          <label class="madal-label"
+            >Телефон
+            <input
+              type="tel"
+              class="modal-input"
+              name="user-tel"
+              required
+              minlength="3"
+            />
+          </label>
+          <label class="madal-label"
+            >Почта
+            <input
+              type="email"
+              class="modal-input"
+              name="user-email"
+              required
+              maxlength="12"
+            />
+          </label>
+          <label class="madal-label"
+            >Комментарий
+            <textarea
+              name="user-text"
+              placeholder="Введите текст"
+              class="modal-text"
+            ></textarea>
+          </label>
           <button type="submit">Отправить</button>
         </form>
       </div>
