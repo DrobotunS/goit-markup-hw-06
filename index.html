@@ -541,9 +541,31 @@
             </li>
           </ul>
         </div>
+        <form class="footer-form">
+          <label class="footer-title footer-lable"
+            >Подпишитесь на рассылку
+            <div class="input-footer">
+              <span class="input-wrap footer-input-wrap">
+                <input
+                  type="email"
+                  class="footer-input"
+                  name="user-email"
+                  placeholder="E-mail"
+                  maxlength="25"
+                />
+              </span>
+            </div>
+          </label>
+          <button
+            type="submit"
+            class="button-submit button-primary footer-button"
+          >
+            Отправить
+          </button>
+        </form>
       </div>
     </footer>
-    <div class="backdrop i-hidden" data-modal>
+    <div class="backdrop is-hidden" data-modal>
       <div class="modal">
         <button type="button" class="button-modal" data-modal-close>
           <svg width="18" height="18" class="close">
@@ -555,44 +577,47 @@
           <label class="madal-label"
             >Имя
             <span class="input-wrap">
-            <input
-              type="text"
-              class="modal-input"
-              name="user-name"
-              required
-              minlength="2"
-            />
-            <svg class="modal-icon" width="18" height="18"><use href="./imeges/icons.svg#icon-person-black"></use></svg>
+              <input
+                type="text"
+                class="modal-input"
+                name="user-name"
+                required
+                minlength="2"
+              />
+              <svg class="modal-icon" width="18" height="18">
+                <use href="./imeges/icons.svg#icon-person-black"></use>
+              </svg>
             </span>
           </label>
           <label class="madal-label"
             >Телефон
             <span class="input-wrap">
-            <input
-              type="tel"
-              class="modal-input"
-              name="user-tel"
-              required
-              minlength="3"
-            />
-            <svg class="modal-icon" width="18" height="18">
-              <use href="./imeges/icons.svg#icon-phone-black"></use>
-            </svg>
+              <input
+                type="tel"
+                class="modal-input"
+                name="user-tel"
+                required
+                minlength="3"
+              />
+              <svg class="modal-icon" width="18" height="18">
+                <use href="./imeges/icons.svg#icon-phone-black"></use>
+              </svg>
             </span>
           </label>
           <label class="madal-label"
             >Почта
             <span class="input-wrap">
-            <input
-              type="email"
-              class="modal-input"
-              name="user-email"
-              required
-              maxlength="12"
-            />
-            <svg class="modal-icon" width="18" height="18">
-              <use href="./imeges/icons.svg#icon-email-black"></use></svg>
-              </span>
+              <input
+                type="email"
+                class="modal-input"
+                name="user-email"
+                required
+                maxlength="25"
+              />
+              <svg class="modal-icon" width="18" height="18">
+                <use href="./imeges/icons.svg#icon-email-black"></use>
+              </svg>
+            </span>
           </label>
           <label class="madal-label"
             >Комментарий
@@ -602,14 +627,37 @@
               class="modal-text"
             ></textarea>
             <div class="modal-field">
-              <input type="checkbox" name="privacy" value="true" class="modal-check" id="privacy">
-              <svg class="icon-checkbox" width="15" height="16">
-              <use href="./imeges/icons.svg#icon-Vector-2"></use></svg>
-              <label for="privacy" class="check-text">Соглашаюсь с рассылкой и принимаю <a class="link-checkbox" href="" target="blank"
-                rel="noopener noreferrer nofollow">Условия договора</a></label>
+              <input
+                type="checkbox"
+                name="privacy"
+                value="true"
+                class="modal-check is-hidden"
+                id="privacy"
+              />
+              <span>
+                <svg class="icon-not-check" width="16" height="15">
+                  <use href="./imeges/icons.svg#icon-Vector-2"></use>
+                </svg>
+                <svg class="icon-check" width="16" height="15">
+                  <use href="./imeges/icons.svg#icon-icon-check"></use>
+                </svg>
+              </span>
+              <label for="privacy" class="check-text"
+                >Соглашаюсь с рассылкой и принимаю
+                <a
+                  class="link-checkbox"
+                  href=""
+                  target="blank"
+                  rel="noopener noreferrer nofollow"
+                >
+                  Условия договора</a
+                ></label
+              >
             </div>
           </label>
-          <button type="submit" class="button-submit button-primary">Отправить</button>
+          <button type="submit" class="button-submit button-primary">
+            Отправить
+          </button>
         </form>
       </div>
     </div>
