@@ -543,25 +543,25 @@
         </div>
         <form class="footer-form">
           <label class="footer-title footer-lable"
-            >Подпишитесь на рассылку
-            <div class="input-footer">
-              <span class="input-wrap footer-input-wrap">
-                <input
-                  type="email"
-                  class="footer-input"
-                  name="user-email"
-                  placeholder="E-mail"
-                  maxlength="25"
-                />
-              </span>
-            </div>
-          </label>
-          <button
-            type="submit"
-            class="button-submit button-primary footer-button"
+            >Подпишитесь на рассылку</label
           >
-            Отправить
-          </button>
+          <div class="footer-email">
+            <span class="footer-input-wrap">
+              <input
+                type="email"
+                class="footer-input"
+                name="user-email"
+                placeholder="E-mail"
+                maxlength="25"
+              />
+            </span>
+            <button type="submit" class="button-primary footer-button">
+              Подписаться
+              <svg width="24" height="24" class="icon-submit">
+                <use href="./imeges/icons.svg#icon-icon-send"></use>
+              </svg>
+            </button>
+          </div>
         </form>
       </div>
     </footer>
@@ -626,14 +626,23 @@
               placeholder="Введите текст"
               class="modal-text"
             ></textarea>
-            <div class="modal-field">
-              <input
-                type="checkbox"
-                name="privacy"
-                value="true"
-                class="modal-check is-hidden"
-                id="privacy"
-              />
+          </label>
+          <span class="modal-field">
+            <input
+              type="checkbox"
+              name="privacy"
+              value="true"
+              class="modal-check is-hidden"
+              id="privacy" />
+            <label for="privacy" class="check-text"
+              >Соглашаюсь с рассылкой и принимаю<a
+                class="link-checkbox"
+                href=""
+                target="blank"
+                rel="noopener noreferrer nofollow"
+              >
+                Условия договора</a
+              >
               <span>
                 <svg class="icon-not-check" width="16" height="15">
                   <use href="./imeges/icons.svg#icon-Vector-2"></use>
@@ -641,20 +650,9 @@
                 <svg class="icon-check" width="16" height="15">
                   <use href="./imeges/icons.svg#icon-icon-check"></use>
                 </svg>
-              </span>
-              <label for="privacy" class="check-text"
-                >Соглашаюсь с рассылкой и принимаю
-                <a
-                  class="link-checkbox"
-                  href=""
-                  target="blank"
-                  rel="noopener noreferrer nofollow"
-                >
-                  Условия договора</a
-                ></label
-              >
-            </div>
-          </label>
+              </span> </label
+          ></span>
+
           <button type="submit" class="button-submit button-primary">
             Отправить
           </button>
