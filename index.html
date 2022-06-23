@@ -627,35 +627,30 @@
               class="modal-text"
             ></textarea>
           </label>
-          <span class="modal-field">
+          <div class="modal-field">
             <input
               type="checkbox"
               name="privacy"
               value="true"
               class="modal-check is-hidden"
-              id="privacy" />
+              id="privacy"
+            />
             <label for="privacy" class="check-text"
-              >Соглашаюсь с рассылкой и принимаю<a
+              ><span class="vaca">
+                <svg class="icon-check" width="14" height="12">
+                  <use href="./imeges/icons.svg#icon-Vector-1"></use>
+                </svg> </span
+              >Соглашаюсь с рассылкой и принимаю
+              <a
                 class="link-checkbox"
                 href=""
                 target="blank"
                 rel="noopener noreferrer nofollow"
-              >
-                Условия договора</a
-              >
-              <span>
-                <svg class="icon-not-check" width="16" height="15">
-                  <use href="./imeges/icons.svg#icon-Vector-2"></use>
-                </svg>
-                <svg class="icon-check" width="16" height="15">
-                  <use href="./imeges/icons.svg#icon-icon-check"></use>
-                </svg>
-              </span> </label
-          ></span>
-
-          <button type="submit" class="button-submit button-primary">
-            Отправить
-          </button>
+                >Условия договора
+              </a>
+            </label>
+          </div>
+          <button type="submit" class="button-primary">Отправить</button>
         </form>
       </div>
     </div>
