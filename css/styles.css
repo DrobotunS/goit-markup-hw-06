@@ -20,6 +20,7 @@
   --work-bg-color: rgba(47, 48, 58, 0.8);
   --time-function: 250ms cubic-bezier(0.4, 0, 0.2, 1);
   --modal-border-color: rgba(33, 33, 33, 0.2);
+  --textarea-color: rgba(117, 117, 117, 0.5);
 }
 /* body */
 body {
@@ -193,15 +194,20 @@ p {
 }
 /* button */
 .button-primary {
-  display: inline-block;
   border: 1px solid transparent;
   border-radius: 4px;
   padding: 10px 32px;
   min-width: 200px;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  justify-content: center;
   color: var(--accent-button-color);
   font-family: inherit;
   background-color: var(--accent-color);
   transition: background-color var(--time-function);
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
   font-weight: 700;
   font-size: 16px;
   line-height: 1.87;
@@ -222,7 +228,6 @@ p {
   text-align: center;
   transition: background-color var(--time-function), color var(--time-function),
     box-shadow var(--time-function);
-
   background-color: var(--button-bg-color);
   color: var(--title-text-color);
   font-family: inherit;
@@ -451,9 +456,6 @@ p {
 .footer-contact {
   margin-right: 70px;
 }
-.footer-soc {
-  margin-right: 93px;
-}
 .footer-input {
   line-height: 1.25;
   width: 358px;
@@ -462,6 +464,7 @@ p {
   margin-right: 12px;
   border: 1px solid rgba(255, 255, 255, 0.3);
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+  color: var(--accent-button-color);
   border-radius: 4px;
   background-color: inherit;
   transition: border-color var(--time-function);
@@ -482,8 +485,11 @@ p {
 }
 .icon-submit {
   margin-left: 10px;
+  fill: var(--accent-button-color);
 }
-
+.footer-form {
+  margin-left: auto;
+}
 /* Portfolio */
 .filter .item + .item {
   margin-left: 8px;
@@ -580,6 +586,7 @@ p {
   width: 30px;
   height: 30px;
   border-radius: 50%;
+  cursor: pointer;
   top: 8px;
   right: 8px;
   border: 1px solid rgba(0, 0, 0, 0.1);
@@ -629,6 +636,7 @@ p {
   resize: none;
   margin-bottom: 20px;
   outline: none;
+  color: var(--textarea-color);
   transition: border-color var(--time-function);
 }
 .modal-text:focus {
@@ -650,31 +658,37 @@ p {
   fill: var(--accent-color);
 }
 .link-checkbox {
-  color: var(--accent-color);
-}
-.modal-field {
-  margin-bottom: 30px;
-}
-.button-submit {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
-    0px 2px 1px rgba(0, 0, 0, 0.2);
-}
-.check-text {
   font-size: 14px;
   line-height: 1.71;
   letter-spacing: 0.03em;
-  margin-left: 23px;
+  color: var(--accent-color);
+  margin-left: 4px;
 }
 .modal-field {
+  margin-bottom: 30px;
   display: flex;
-  position: relative;
+  justify-content: center;
+}
+.check-text {
+  display: flex;
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
   align-items: center;
 }
+.check-text span {
+  width: 16px;
+  height: 15px;
+  border: 2px solid var(--logo-header-color);
+  border-radius: 3px;
+  margin-right: 7px;
+  display: flex;
+  align-items: center;
+  fill: transparent;
+  transition: background-color var(--time-function),
+    border-color var(--time-function);
+}
 .modal-check {
-
   position: absolute;
   white-space: nowrap;
   width: 1px;
@@ -686,25 +700,14 @@ p {
   clip-path: inset(50%);
   margin: -1px;
 }
-
-.modal-check:checked + .check-text .icon-check {
-  visibility: visible;
+.modal-check:checked + .check-text span {
+  background-color: var(--accent-color);
+  border: none;
+  fill: var(--accent-button-color);
+  display: flex;
+  justify-content: center;
 }
-.modal-check:checked + .check-text .icon-not-check {
-  visibility: hidden;
+.modal-check:focus + .check-text span {
+  border-color: var(--accent-color);
 }
-.icon-check {
-  position: absolute;
-  left: 0;
-  top: 50%;
-  visibility: hidden;
-  transform: translateY(-50%);
-  transition: visibility var(--time-function);
-}
-.icon-not-check {
-  position: absolute;
-  left: 0;
-  top: 50%;
-  transform: translateY(-50%);
-  transition: visibility var(--time-function);
-} 
+.
